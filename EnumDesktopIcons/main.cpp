@@ -86,8 +86,6 @@ void FindDesktopFolderView(REFIID riid, void** ppv) {
     spView->QueryInterface(riid, ppv);
 }
 
-
-
 int main(int argc, char *argv[]) {
     //Fix text print
     setlocale(LC_CTYPE, "");
