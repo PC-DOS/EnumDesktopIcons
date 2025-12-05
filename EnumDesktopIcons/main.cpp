@@ -153,8 +153,8 @@ int main(int argc, char *argv[]) {
         //Get text for parsing
         STRRET strParsingData;
         spFolder->GetDisplayNameOf(spidl, SHGDN_FORPARSING, &strParsingData);
-		CComHeapPtr<wchar_t> spszParsingData;
-		StrRetToStr(&strParsingData, spidl, &spszParsingData);
+        CComHeapPtr<wchar_t> spszParsingData;
+        StrRetToStr(&strParsingData, spidl, &spszParsingData);
 
         //Print to console
         POINT pt;
@@ -167,7 +167,7 @@ int main(int argc, char *argv[]) {
             fwprintf(fpOutputFile, L"[Item%d]\n", iItemID);
             fwprintf(fpOutputFile, L"Name=%ls\n", wcsreplace(spszName, L"\\", L"\\\\"));
             fwprintf(fpOutputFile, L"ForAddressBar=%ls\n", wcsreplace(spszAddressBarData, L"\\", L"\\\\"));
-			fwprintf(fpOutputFile, L"ForParsing=%ls\n", wcsreplace(spszParsingData, L"\\", L"\\\\"));
+            fwprintf(fpOutputFile, L"ForParsing=%ls\n", wcsreplace(spszParsingData, L"\\", L"\\\\"));
             fwprintf(fpOutputFile, L"X=%d\n", pt.x);
             fwprintf(fpOutputFile, L"Y=%d\n", pt.y);
             fwprintf(fpOutputFile, L"\n");
