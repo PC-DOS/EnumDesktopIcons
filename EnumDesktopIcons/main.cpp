@@ -96,12 +96,14 @@ int main(int argc, char *argv[]) {
 	bool bIsOutputFileReady = false;
 	FILE * fpOutputFile = NULL;
 	if (argc > 1) {
-		// Check output argument
+		// Convert argument in char* to wchar_t*
+		// https://blog.csdn.net/jeanphorn/article/details/45745739
 		int iOutputPathLen = strlen(argv[1]) + 1;
 		wchar_t * spszOutputFile = new wchar_t[iOutputPathLen];
 		swprintf(spszOutputFile, iOutputPathLen, L"%hs", argv[1]);
 
-		// Open file
+		// Open file as UTF-8
+		// https://stackoverflow.com/questions/10028750
 		fpOutputFile = _wfopen(spszOutputFile, L"w");
 		if (!(fpOutputFile == NULL)) {
 			_setmode(_fileno(fpOutputFile), _O_U8TEXT);
