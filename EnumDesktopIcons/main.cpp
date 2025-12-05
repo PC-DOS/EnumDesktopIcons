@@ -110,7 +110,6 @@ int main(int argc, char *argv[]) {
 			bIsOutputFileReady = true;
 		}
 	}
-	
     
 	// Get FolderView of Desktop
     CCoInitialize init;
