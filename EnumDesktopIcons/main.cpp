@@ -37,7 +37,7 @@ public:
     HRESULT m_hr;
 };
 
-//Replace specified string in a wchat_t string
+//Replace specified string in a wchar_t string
 //https://zhuanlan.zhihu.com/p/364035600
 wchar_t * wcsreplace(wchar_t * str, wchar_t * oldstr, wchar_t * newstr) {
 
