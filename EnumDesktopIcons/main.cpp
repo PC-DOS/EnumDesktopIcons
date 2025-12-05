@@ -40,7 +40,6 @@ public:
 //Replace specified string in a wchar_t string
 //https://zhuanlan.zhihu.com/p/364035600
 wchar_t * wcsreplace(wchar_t * str, wchar_t * oldstr, wchar_t * newstr) {
-
     wchar_t * bstr = new wchar_t[wcslen(str)];
     memset(bstr, 0, sizeof(bstr));
 
@@ -58,7 +57,6 @@ wchar_t * wcsreplace(wchar_t * str, wchar_t * oldstr, wchar_t * newstr) {
     delete bstr;
 
     return str;
-
 }
 
 //Get shell view for the desktop
